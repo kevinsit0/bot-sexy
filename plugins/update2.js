@@ -4,8 +4,8 @@ const { promisify } = require('util')
 const { join } = require('path')
 
 let confirmation = {}
-let repository = 'Nurutomo/wabot-aq'
-let branch = 'master'
+let repository = 'kevinsit0/bot-sexy'
+let branch = 'main'
 
 async function handler(m, { text }) {
     let res = await fetch(`https://raw.githubusercontent.com/${repository}/${branch}/${text}`)
@@ -18,11 +18,11 @@ async function handler(m, { text }) {
             text,
             timeout: setTimeout(() => (m.reply('timed out'),delete confirmation[m.sender]), 60000)
         }
-        throw 'File exists, are you sure want to overwrite? (Y/n) (60s Timeout)'
+        throw 'El archivo existe, ¿está seguro de que desea sobrescribirlo? (Y/n) (60s Timeout)'
     }
     res.body.pipe(createWriteStream(filename))
     res.body.once('end', () => {
-        m.reply('Done update!')
+        m.reply('Actualización terminada!')
         conn.sendFile(m.chat, filename, text, null, m).catch(console.error)
     })
 }
@@ -33,7 +33,7 @@ handler.all = async m => {
     if (/^y(es|a)?$/i.test(m.text)) {
         res.body.pipe(createWriteStream(filename))
         res.body.once('end', () => {
-            m.reply('Done overwrite!')
+            m.reply('Hecho sobrescribir!')
             conn.sendFile(m.chat, filename, text, null, m).catch(console.error)
         })
         clearTimeout(timeout)
@@ -41,7 +41,7 @@ handler.all = async m => {
         return !0
     } else if (/^no?$/i.test(m.text)) {
         delete confirmation[m.sender]
-        m.reply('Rejected')
+        m.reply('Rechazado')
         clearTimeout(timeout)
         return !0
     }
