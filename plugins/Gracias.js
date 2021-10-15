@@ -1,8 +1,8 @@
-let handler = m => m.reply('*Hola👋*🌚, *de nada espero aya sido de mucha ayuda🌝*')
+let handler = async (m, { conn }) => {
+    conn.sendFile(m.chat, 'media/sticker/1.webp', '', 'xd', m)
+}
 
-handler.customPrefix = /gracias|Gracias|graciass/i
+handler.customPrefix = /^gracias|thanks?$/i
 handler.command = new RegExp
-handler.private = false
-handler.group = true
 
 module.exports = handler
