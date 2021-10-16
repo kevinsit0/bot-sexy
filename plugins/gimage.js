@@ -14,7 +14,7 @@ ${text}
 ➸ *height*: ${height}
 `.trim(), m)
 }
-handler.help = ['gimage <consulta>', 'image <consulta>']
+handler.help = ['gimage <consulta>', 'imagen <consulta>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(gimage|image)$/i
 
