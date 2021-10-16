@@ -11,9 +11,9 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
   conn.reply(m.chat, `${batch.success}`, m)
   }) .catch(() => { conn.reply(m.chat, `_¡La función jalea está desabilitada!_`, m) })
 }
-handler.help = ['jalea'].map(v => v + ' *texto*')
+handler.help = ['nannonanno'].map(v => v + ' *texto*')
 handler.tags = ['fun']
-handler.command = /^(jalea)$/i
+handler.command = /^(nanno)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
