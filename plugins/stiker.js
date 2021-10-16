@@ -8,7 +8,7 @@ let handler  = async (m, { conn, args }) => {
     if (/image|video/.test(mime)) {
       let img = await q.download()
       if (!img) throw 'Foto/Video tidak ditemukan'
-conn.fakeReply(m.chat,  '*ESPERA ⌛*', '0@s.whatsapp.net', '*✨𝐛𝐨𝐭-𝒔𝒆𝒙𝒚✨*')
+conn.fakeReply(m.chat,  '*ESPERA ⌛*', '0@s.whatsapp.net', '*👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈*')
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (args[0]) stiker = await sticker(false, args[0], global.packname, global.author)
   } finally {
