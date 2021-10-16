@@ -51,8 +51,8 @@ ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
-  conn.fakeReply(m.chat, '*ESPERA ⏳*', '0@s.whatsapp.net', '✨𝐛𝐨𝐭-𝒔𝒆𝒙𝒚✨')
-  conn.sendFile(m.chat, 'media/menu.opus', m)
+  conn.fakeReply(m.chat, '*ESPERA ⏳*', '0@s.whatsapp.net', '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈')
+  conn.sendFile(m.chat, 'media/holasoynanno(2).mp3', m)
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let { exp, limit, level, role } = global.db.data.users[m.sender]
@@ -148,7 +148,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendFile(m.chat, 'media/menu.jpg', '', text.trim(), m)
+    conn.sendFile(m.chat, 'media/Nannomenu.jpg', '', text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, 'Lo siento, el menú tiene un error', m)
     throw e
