@@ -3,8 +3,8 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     if (isROwner) global.conn.welcome = text
     else if (isOwner) conn.welcome = text
     global.db.data.chats[m.chat].sWelcome = text
-    m.reply('Welcome berhasil diatur\n@user (Mention)\n@subject (Judul Grup)\n@desc (Deskripsi Grup)')
-  } else throw 'Teksnya mana?'
+    m.reply('Bienvenida configurada correctamente @user (Mención) @subject (título del grupo) @desc (Descripción del grupo)')
+  } else throw 'el texto???'
 }
 handler.help = ['setwelcome <teks>']
 handler.tags = ['owner', 'group']
