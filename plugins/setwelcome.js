@@ -20,4 +20,4 @@ handler.tags = ['owner', 'group']
 
 handler.command = /^setwelcome$/i
 
-module.exports = handler
+module.exports = 
