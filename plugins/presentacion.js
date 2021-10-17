@@ -2,7 +2,7 @@ let handler = m => m.reply('*Hola👋 soy 👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨�
 
 handler.customPrefix = /^(presentar)$/i
 handler.command = new RegExp
-handler.private = false
+handler.private = true
 handler.group = true
 
 module.exports = handler
