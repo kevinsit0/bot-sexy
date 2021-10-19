@@ -1,0 +1,9 @@
+let handler = async (m, { conn }) => {
+    conn.sendFile(m.chat, 'media/sticker/1.webp', '', 'xd', m)
+    conn.fakeReply(m.chat, '*hola soy nanno asistente de kevin*', '0@s.whatsapp.net', '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈')
+}
+
+handler.customPrefix = /^kevin$/i
+handler.command = new RegExp
+
+module.exports = handler
