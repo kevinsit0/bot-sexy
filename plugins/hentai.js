@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
         let res = await fetch(global.API('xteam', '/randomimage/hentai', {}, 'APIKEY'))
         let img = await res.buffer()
         conn.sendMessage(m.chat, img, MessageType.image, {
-            quoted: m, caption: '*ᴡᴀʟʟᴇ 🤖 ʙᴏᴛ*'
+            quoted: m, caption: '*👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈*'
         })
     } catch (e) {
         console.log(e)
