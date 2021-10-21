@@ -1,5 +1,5 @@
 let handler = async (m, { conn }) => {
-    conn.sendFile(m.chat,'media/sticker/Bot.webp', '', 'hola', m)
+    conn.sendFile(m.chat,'hola', '', '', m)
 }
 
 handler.customPrefix = /^kevin?$/i
