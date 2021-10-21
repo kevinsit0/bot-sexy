@@ -1,5 +1,5 @@
 let handler = async (m, { conn }) => {
-    conn.sendFile(m.chat, 'media/sticker/1.webp', '0@s.whatsapp.net', 'xd', m)
+    conn.sendFile(m.chat, '*kevin mi novio*', '0@s.whatsapp.net', '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈')
 }
 
 handler.customPrefix = /^kevin?$/i
