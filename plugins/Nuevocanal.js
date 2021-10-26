@@ -3,7 +3,7 @@ let handler = async (m, { conn,usedPrefix }) => {
 ├┉┉┉┉↯❏ *Discord:* ❏↯┉┉┉
 https://discord.gg/Zen6DQeVT6                             
 ├┉┉┉┉↯❏  *Instagram:* ❏↯┉┉┉┉
-https://instagram.com/abd_hill666/
+https://instagram.com/abd.oficial_?utm_medium
 ├┉┉┉┉↯❏  *YouTube:* ❏↯┉┉┉┉
 https://youtube.com/channel/UClDujRkM1VL92uhhUGcDwRQ
 ╰────❲ *👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈* ❳────╯`,
