@@ -4,6 +4,6 @@ let handler  = async (m, { conn }) => {
 handler.customPrefix = /^(florero)$/i
 handler.command = new RegExp
 handler.private = true
-handler.group = true
+
 
 module.exports = handler
