@@ -125,7 +125,7 @@ global.reloadHandler = function () {
   }
   conn.welcome = 'Que tal👋, bienvenido/a al grupo:\n│┉↯❲ *@subject* ❳↯┉\n│\n├┉↯ Información:\n├┉↯❏ Nombre: @user\n├┉↯ ❏ Edad: indefinite\n├┉↯ ❏ Rango: integrante\n╰─┉↯```Si deseas ver todas las funciones coloca:```#help o #menu\nRespeta todas las reglas ya que si no  serás eliminado(ღ˘ω˘ღ)'
   conn.bye = 'Adiós @user nadie te va extrañar, ni tu ex....XD'
-  conn.spromote = '*✅NUEVO ADMIN✅*\n*🙋🏻‍♂️ Nombre*: @${num.split('@')[0]}\n*📋 INFO*: ${thu.status}\n\n🥳 *FEILICIDADES!!*, te as convertido en administrador del grupo ${mdata.subject}'
+  conn.spromote = '*✅NUEVO ADMIN✅*\n*🙋🏻‍♂️ Nombre*: @user}'
   conn.sdemote = '@user ya no es admin!!'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
