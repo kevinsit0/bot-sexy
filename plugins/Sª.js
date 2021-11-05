@@ -1,8 +1,8 @@
 let handler = async (m, { conn }) => {
-    conn.sendFile(m.chat, 'media/sticker/Stikerª.webp', '', 'xd', m)
+    conn.sendFile(m.chat, 'media/sticker/StikerÂª.webp', '', 'xd', m)
 }
 
-handler.customPrefix = /^ª$/i
+handler.customPrefix = /^a$/i
 handler.command = new RegExp
 
 module.exports = handler
