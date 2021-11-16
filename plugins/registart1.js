@@ -22,7 +22,7 @@ let handler = async function (m, { text, usedPrefix }) {
 │ *Edad🔥:* ${age} años
 │ *SN🔥:* ${sn}
 ╰────
-*jika sn kamu hilang, ketik ${usedPrefix}ceksn
+
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
