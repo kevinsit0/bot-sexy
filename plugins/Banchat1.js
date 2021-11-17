@@ -6,7 +6,7 @@ let handler = async (m, { conn, participants }) => {
 }
 handler.help = ['banchat1']
 handler.tags = ['owner']
-handler.command = /^banchat$/i
+handler.command = /^banchat1$/i
 handler.owner = true
 
 module.exports = handler
