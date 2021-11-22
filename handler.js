@@ -389,7 +389,7 @@ await this.blockUser(from, 'add')
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Este comando solo puede ser utilizado por _*Kevin*_ ',
+    rowner: 'Y ESTE WEY QUIEN SE CREE PARA DARME ÓRDENES😡 ALV PINCHE MORRILLO, AL ÚNICO QUE LE AGO CASO ES A KEVIN😃',
     owner: 'Y ESTE WEY QUIEN SE CREE PARA DARME ÓRDENES😡 ALV PINCHE MORRILLO, AL ÚNICO QUE LE AGO CASO ES A KEVIN😃',
     mods: 'Este comando solo puede ser utilizado por _*Moderator*_ !',
     premium: 'Este comando es solo para miembros _*Premium*_ !',
