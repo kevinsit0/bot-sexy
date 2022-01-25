@@ -1,4 +1,5 @@
 let util = require('util')
+Let fetch =requiere ('node-fetch')
 let simple = require('./lib/simple')
 let { MessageType } = require('@adiwajshing/baileys')
 
