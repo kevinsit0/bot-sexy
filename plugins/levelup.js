@@ -21,7 +21,7 @@ Necesitas *${max - user.exp}* para el próximo nivel!
 handler.help = ['levelup']
 handler.tags = ['xp']
 
-handler.command = /^levelup$/i
+handler.command = /^nivel$/i
 handler.register = false
 
 module.exports = handler
