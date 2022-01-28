@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersLevel = sortedLevel.map(enumGetKey)
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     if (!levelling.canLevelUp(user.level, user.exp, global.multiplier)) {
-      let text = `@${who.split`@`[0]} Level *${user.level} (${user.exp - min}/${xp})*\nKurang *${max - user.exp}* lagi!`.trim()
+      let text = `@${who.split`@`[0]} nivel *${user.level} (${user.exp - min}/${xp})*\nNecesitas *${max - user.exp}* para el próximo nivel!`.trim()
       await conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
         mentionedJid: [who],
         externalAdReply: {
@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let before = user.level * 1
     while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-      let text = `@${who.split`@`[0]} _*Level Up!*_\n_${before}_ -> _${user.level}_`.trim()
+      let text = `@${who.split`@`[0]} _*elevar a mismo nivel!*_\n_${before}_ -> _${user.level}_`.trim()
       await conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
         mentionedJid: [who],
         externalAdReply: {
