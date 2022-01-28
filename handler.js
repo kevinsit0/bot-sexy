@@ -352,7 +352,7 @@ module.exports = {
 
                   (chat.sBye || this.bye || conn.bye || '左様なら Sayounara, @user!')).replace(/@user/g, '@' + user.split`@`[0])
 
-                let wel = `Welcome Message`
+                let wel = `Mensaje de bienvenida`
 
                 let lea = `Group Participant Leave`
 
@@ -366,7 +366,7 @@ module.exports = {
 
                   title: action === 'add' ? wel : lea,
 
-                  body: 'Haruno Bot',
+                  body: '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈',
 
                   thumbnail: pp
 
