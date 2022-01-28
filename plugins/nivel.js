@@ -48,7 +48,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 handler.help = ['levelup']
 handler.tags = ['xp']
 
-handler.command = /^nivel$/i
+handler.command = /^levelup$/i
 
 module.exports = handler
 function sort(property, ascending = true) {
