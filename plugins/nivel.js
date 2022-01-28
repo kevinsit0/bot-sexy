@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let before = user.level * 1
     while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-      let text = `@${who.split`@`[0]} _*elevar a mismo nivel!*_\n_${before}_ -> _${user.level}_`.trim()
+      let text = `@${who.split`@`[0]} _*Felicidades, has subido de nivel!!*_\n_${before}_ -> _${user.level}_`.trim()
       await conn.reply(m.chat, text, m, { thumbnail: kai, contextInfo: {
         mentionedJid: [who],
         externalAdReply: {
