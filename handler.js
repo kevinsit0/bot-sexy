@@ -318,7 +318,68 @@ module.exports = {
     }
   },
  async participantsUpdate({ jid, participants, action }) {
-    let 
+
+    let chat = global.db.data.chats[jid] || {}
+
+    let text = ''
+
+    switch (action) {
+
+        case 'add':
+
+        case 'remove':
+
+          if (chat.welcome) {
+
+            let groupMetadata = await this.groupMetadata(jid)
+
+            for (let user of participants) {
+
+              let pp = await(await fetch('https://telegra.ph/file/39bbded9693c9338069fd.jpg')).buffer()
+
+              let kai = await(await fetch('https://telegra.ph/file/4d2bca79fa5a4f2dd3d81.jpg')).buffer()
+
+              try {
+
+                pp = await ( await fetch(await this.getProfilePicture(user))).buffer()
+
+              } catch (e) {
+
+              } finally {
+
+              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'ようこそ Youkuso, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc) :
+
+                  (chat.sBye || this.bye || conn.bye || '左様なら Sayounara, @user!')).replace(/@user/g, '@' + user.split`@`[0])
+
+                let wel = `Welcome Message`
+
+                let lea = `Group Participant Leave`
+
+                this.reply(jid, text, 0, { thumbnail: kai, contextInfo: {
+
+                mentionedJid: [user],
+
+                externalAdReply: {
+
+                  mediaUrl: 'https://youtu.be/-tKVN2mAKRI',
+
+                  title: action === 'add' ? wel : lea,
+
+                  body: 'Haruno Bot',
+
+                  thumbnail: pp
+
+                }
+
+              }}) 
+
+            }
+
+          }
+
+          }
+
+          break
       case 'promote':
         text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
       case 'demote':
