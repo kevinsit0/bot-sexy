@@ -354,7 +354,7 @@ module.exports = {
 
                 let wel = `Mensaje de bienvenida`
 
-                let lea = `Group Participant Leave`
+                let lea = `Mensaje de despedida`
 
                 this.reply(jid, text, 0, { thumbnail: kai, contextInfo: {
 
