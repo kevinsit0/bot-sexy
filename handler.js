@@ -71,6 +71,8 @@ module.exports = {
           if (!('delete' in chat)) chat.delete = true
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = false
+          if (!('jadibot' in chat)) chat.jadibot = false
+          
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -82,15 +84,10 @@ module.exports = {
           delete: true,
           antiLink: false,
           viewonce: false,
+          jadibot: false,
         }
+      
         
-        var setting = global.db.data.settings[this.user.jid]
-        if (typeof setting !== 'object') global.db.data.settings[this.user.jid] = {}
-        if (setting) {
-        	if (!('jadibot' in setting)) setting.jadibot = false
-        } else global.db.data.settings[this.user.jid] = {
-        	jadibot: false,
-        }
       } catch (e) {
         console.error(e)
       }
