@@ -1,5 +1,5 @@
 const { servers, yta, ytv } = require('../lib/y2mate')
-let ytv = require('yt-search')
+let yts = require('yt-search')
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `Harap masukkan query!\n\nContoh: ${usedPrefix + command} yanagi nagi one's hope`
