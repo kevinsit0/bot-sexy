@@ -23,6 +23,10 @@ global.APIKeys = { // APIKey Here
 global.packname = '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈'
 global.author = 'kevin'
 
+
+global.watermark = '© kevin'
+
+
 global.multiplier = 69 // The higher, The harder levelup
 
 let fs = require('fs')
