@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let chat = global.db.data.chats[m.chat]
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
-  if (!vid) throw 'Konten Tidak ditemukan'
+  if (!vid) throw 'Contenido no encontrado'
   let isVideo = /2$/.test(command)
   let yt = false
   let yt2 = false
