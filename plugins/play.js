@@ -27,10 +27,13 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let { dl_link, thumb, title, filesize, filesizeF } = yt
   await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
  *${title}*
-*Ukuran File Audio:* ${filesizeF}
-*Ukuran File Video:* ${yt2.filesizeF}
-*Server y2mate:* ${usedServer}
-`.trim(), watermark, 'Audio', `.yta ${vid.url}`, 'Video', `.ytv ${vid.url}`)
+ 00:00 ○────────────────────○ 🔊
+
+ㅤㅤㅤㅤㅤㅤㅤ ◄◄⠀▐▐⠀►►
+*Audio:* ${filesizeF}
+*Video:* ${yt2.filesizeF}
+
+`.trim(), watermark, '🎼AUDIO', `.yta ${vid.url}`, '🎥VIDEO', `.ytv ${vid.url}`)
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
