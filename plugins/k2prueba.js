@@ -1,0 +1,10 @@
+let handler  = async (m, { conn }) => {
+       conn.sendFile(m.chat, 'media/returbio.opus', '', 'xd', m)
+}
+handler.help = ['re']
+handler.tags = ['premium']
+handler.command = /^(vps)$/i
+handler.group = true
+handler.register = false
+
+module.exports = handler
