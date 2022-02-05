@@ -2,10 +2,10 @@ let moment = require('moment-timezone')
 let handler = async (m, { conn}) => {
     let {registered } = global.db.data.users[m.sender]
     let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
-    conn.sendButton(m.chat, `${ucapan()}, *${name}*`, `_Presione el botón "VPS" para ver las opciones_\n\nᴡᴀʟʟ•🅔 ᴮᴼᵀ`, 'VPS', `.vps`)
+    conn.sendButton(m.chat, `${ucapan()}, *${name}*`, `_HOLA SOY EL ASISTENTE_\n\n𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨`, 'INICIALES ABD', `.nick`)
 }
 
-handler.customPrefix = /^(kevin)$/i
+handler.customPrefix = /^(canal|nick|discord|iniciales|)$/i
 handler.command = new RegExp
 handler.group = true
 handler.disabled= false
