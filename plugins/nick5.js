@@ -4,8 +4,7 @@ let handler = async (m, { conn,usedPrefix }) => {
 '👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈'
 .trim()) 
 }
-handler.customPrefix = /^(nick)$/i
-handler.command = new RegExp
+handler.command = /^(nick)$/i
 handler.private = false
 handler.group = true
 
