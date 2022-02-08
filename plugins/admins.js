@@ -31,7 +31,7 @@ ${listAdmin}
         conn.sendFile(m.key.remoteJid, pp, 'pp.jpg', text, m, false, { contextInfo: { mentionedJid } })
     }
 }
-handler.command = /^(@admins)$/i
+handler.command = /^(admins|@admins)$/i
 
 handler.group = true
 
