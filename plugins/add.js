@@ -26,7 +26,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
         mentionedJid: conn.parseMention(teks)
       }
     })
-    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, 'Hey!! Hola, me presento, soy The Shadow Brokers - Bot, y soy un Bot para WhatsApp, una persona del grupo utilizo el comando para añadirte al grupo, pero no pude agregarte, asi que te mando la invitacion para que te agregues, te esperamos!!', jpegThumbnail ? {
+    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, '_Hey!! Hola, me presento, soy 👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈 asistente personal de *Kevin*, y soy un Bot para WhatsApp, una persona del grupo utilizo el comando para añadirte al grupo, pero no pude agregarte, asi que te mando la invitacion para que te agregues, te esperamos!!_', jpegThumbnail ? {
       jpegThumbnail
     } : {})
   }
