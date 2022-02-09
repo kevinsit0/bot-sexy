@@ -352,9 +352,9 @@ module.exports = {
 
                   (chat.sBye || this.bye || conn.bye || '左様なら Sayounara, @user!')).replace(/@user/g, '@' + user.split`@`[0])
 
-                let wel = `Mensaje de Bienvenida`
+                let wel = `welcome☺️`
 
-                let lea = `Salida del Grupo`
+                let lea = `bye👋🏻`
 
                 this.reply(jid, text, 0, { thumbnail: kai, contextInfo: {
 
