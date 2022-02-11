@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
     let json = await gas.json()
     m.reply(`*Total stiker:* ${json.result.stickers.length}
-*Estimasi selesai:* ${json.result.stickers.length * 1.5} detik`.trim())
+*Estimado completo:* ${json.result.stickers.length * 1.5} detik`.trim())
 
     for (let i = 0; i < json.result.stickers.length; i++) {
         let fileId = json.result.stickers[i].thumb.file_id
