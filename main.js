@@ -124,7 +124,7 @@ global.reloadHandler = function () {
     conn.off('CB:action,,call', conn.onCall)
   }
   conn.welcome = 'Que tal👋, bienvenido/a al grupo:\n│┉↯❲ *@subject* ❳↯┉\n│\n├┉↯ Información:\n├┉↯❏ Nombre: @user\n├┉↯ ❏ Edad: indefinite\n├┉↯ ❏ Rango: integrante\n╰─┉↯```Si deseas ver todas las funciones coloca:```#help o #menu\nRespeta todas las reglas ya que si no  serás eliminado(ღ˘ω˘ღ)'
-  conn.bye = 'Adiós @user nadie te va extrañar, ni tu ex....XD'
+  conn.bye = '┏━━━━━━━━━━━━\n┃──〘 *ADIOS* 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━''
   conn.spromote = '*✅NUEVO ADMIN✅*\n*🙋🏻‍♂️ Nombre*: @user}'
   conn.sdemote = '@user ya no es admin!!'
   conn.handler = handler.handler
