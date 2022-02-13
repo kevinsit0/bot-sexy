@@ -428,13 +428,13 @@ await this.blockUser(from, 'add')
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Y ESTE WEY QUIEN SE CREE PARA DARME ÓRDENES😡 ALV PINCHE MORRILLO, AL ÚNICO QUE LE AGO CASO ES A KEVIN😃',
-    owner: 'Y ESTE WEY QUIEN SE CREE PARA DARME ÓRDENES😡 ALV PINCHE MORRILLO, AL ÚNICO QUE LE AGO CASO ES A KEVIN😃',
+    rowner: '*[ ⚠ ️] Este comando solo puede ser utilizado por el propietario/owner del Bot*',
+    owner: '*[ ⚠ ️] Este comando solo puede ser utilizado por sub Bots (jadibot/serbot) y el propietario*',
     mods: 'Este comando solo puede ser utilizado por _*Moderator*_ !',
     premium: 'Este comando es solo para miembros _*Premium*_ !',
     group: 'Este comando solo se puede usar en grupos!',
     private: 'Este comando solo se puede usar en chats privados!',
-    admin: 'Y ESTE WEY QUIEN SE CREE 🤔🤔 PINCHE MORRILLO ALV👹',
+    admin: '*[ ⚠ ️]️ Este comando es solo para administradores del grupo*',
     botAdmin: 'Haga del bot un *Admin* para usar este comando!',
     unreg: 'Regístrese para utilizar esta función, escribiendo:\n\n*.reg nombre.edad*\nEjemplo: *.reg Walle.25*'
   }[type]
