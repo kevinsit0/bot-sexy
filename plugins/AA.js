@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
 		contentText: '*TE VA A CAER LA POLICÍA 🚔️*',
 		footerText: '©The Shadow Brokers - Bot',
 		buttons: [
-			{ buttonId: '.nick', buttonText: { displayText: 'NICK' }, type: 1 }
+			{ buttonId: '.nick', buttonText: { displayText: 'NICK' }, type: 1 },
 			{ buttonId: 'canal', buttonText: { displayText: 'CANAL' }, type: 1 }
 		],
 		headerType: 4,
