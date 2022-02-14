@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn }) => {
-	let url = anime[Math.floor(Math.random() * anime.length)]
+	
 	await conn.sendMessage(m.chat, {
 		contentText: '*HOLA BIENVENID@ BUSCABAS LAS INICIALES O EL CANAL DEL DISCORD*',
 		footerText: '©The Shadow Brokers - Bot',
