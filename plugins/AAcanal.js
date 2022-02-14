@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
 			{ buttonId: '.bienvenido', buttonText: { displayText: 'canal' }, type: 1 }
 		],
 		headerType: 4,
-		imageMessage: (await conn.prepareMessageMedia(await (await fetch).buffer(), 'imageMessage', {})).imageMessage
+		imageMessage: (await conn.prepareMessageMedia(await (await fetch)(), 'imageMessage', {})).imageMessage
 	}, 'buttonsMessage', { quoted: m })
 }
 handler.customPrefix = /^(nick|iniciales|server|servidores|server|vps|servi|servidor|servÃ­)$/i
