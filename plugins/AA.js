@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
 		contentText: '*TE VA A CAER LA POLICÍA 🚔️*',
 		footerText: '©The Shadow Brokers - Bot',
 		buttons: [
-			{ buttonId: '.bienvenido', buttonText: { displayText: 'SIGUIENTE' }, type: 1 }
+			{ buttonId: '.nick', buttonText: { displayText: 'SIGUIENTE' }, type: 1 }
 		],
 		headerType: 4,
 		imageMessage: (await conn.prepareMessageMedia(await (await fetch(url)).buffer(), 'imageMessage', {})).imageMessage
