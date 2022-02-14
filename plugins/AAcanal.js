@@ -7,9 +7,8 @@ let handler = async (m, { conn }) => {
 		buttons: [
 			{ buttonId: '.bienvenido', buttonText: { displayText: 'canal' }, type: 1 }
 		],
-		headerType: 4,
-		imageMessage: (await conn.prepareMessageMedia(await (await fetch(url)).buffer(), 'imageMessage', {})).imageMessage
-	}, 'buttonsMessage', { quoted: m })
+		
+
 }
 handler.customPrefix = /^(nick|iniciales|server|servidores|server|vps|servi|servidor|servÃ­)$/i
 handler.command = new RegExp
