@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
 		contentText: '*TE VA A CAER LA POLICÍA 🚔️*',
 		footerText: '©𝑴𝒂𝒅𝒆 𝒃𝒚 𝑲𝒆𝒗𝒊𝒏🔮 - 👿𝐛𝐨𝐭-𝐧𝐚𝐧𝐧𝐨😈',
 		buttons: [
-			{ buttonId: '.loli', buttonText: { displayText: 'SIGUIENTE' }, type: 1 }
+			{ buttonId: '.lolii', buttonText: { displayText: 'SIGUIENTE' }, type: 1 }
 		],
 		headerType: 4,
 		imageMessage: (await conn.prepareMessageMedia(await (await fetch(url)).buffer(), 'imageMessage', {})).imageMessage
@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
 }
 handler.command = /^(loli2)$/i
 handler.tags = ['internet']
-handler.help = ['loli']
+handler.help = ['lolii']
 module.exports = handler
 
 global.anime = [
