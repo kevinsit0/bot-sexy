@@ -8,6 +8,6 @@ type: 'audioMessage',
 ptt: true 
 })
 }
-handler.customPrefix = /bañate|cochino|cochina|cerda/
+handler.customPrefix = /bañate|cerda|cochina|hueles a caca|mierda/
 handler.command = new RegExp
 module.exports = handler
