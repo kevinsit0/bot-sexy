@@ -1,17 +1,20 @@
-let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
-module.exports = {
-  before(m, { isAdmin, isBotAdmin }) {
-    if (m.isBaileys && m.fromMe) return true
-    let chat = global.db.data.chats[m.chat]
-    let isGroupLink = linkRegex.exec(m.text)
+let handler = m => m
 
-    if (chat.antiLink && isGroupLink) {
-      m.reply('Hapus!!\n\nLink Grup terdeteksi')
-      if (global.opts['restrict']) {
-        if (isAdmin || !isBotAdmin) return true
-        // this.groupRemove(m.chat, [m.sender])
-      }
+let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
+handler.before = async function (m, { isAdmin, isBotAdmin }) {
+  if (m.isBaileys || m.fromMe) return
+  let chat = db.data.chats[m.chat]
+  let isGroupLink = linkRegex.exec(m.text)
+
+  if (chat.antilink && isGroupLink && !isAdmin && m.isGroup) {
+    if (isBotAdmin) var thisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
+    if (m.text.includes(thisGroup)) return
+    await this.sendButton(m.chat, `*link grup terdeteksi!*${isBotAdmin ? '' : `\n\nbot bukan admin`}`, watermark, 'Disable antilink', '.0 antilink', m)
+    if (db.data.settings[this.user.jid].restrict) {
+      if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
     }
-    return true
   }
+  return !0
 }
+
+module.exports = handler
