@@ -1,20 +1,22 @@
-let handler = m => m
-
 let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
-handler.before = async function (m, { isAdmin, isBotAdmin }) {
-  if (m.isBaileys || m.fromMe) return
-  let chat = db.data.chats[m.chat]
+handler.before = function (m, { user, bot, groupMetadata }) {
+  if (m.isBaileys && m.fromMe) return true
+  let chat = global.DATABASE.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
-  if (chat.antilink && isGroupLink && !isAdmin && m.isGroup) {
-    if (isBotAdmin) var thisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
-    if (m.text.includes(thisGroup)) return
-    await this.sendButton(m.chat, `*link grup terdeteksi!*${isBotAdmin ? '' : `\n\nbot bukan admin`}`, watermark, 'Disable antilink', '.0 antilink', m)
-    if (db.data.settings[this.user.jid].restrict) {
-      if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
-    }
+  if (chat.antiLink && isGroupLink) {
+    m.reply('*Adiós👋, rompiste las reglas serás eliminado...!!*')
+if (user.isAdmin || user.isSuperAdmin) return m.reply('*Uh te salvaste eres admin, no serás eliminado*')
+    let participants = m.isGroup ? groupMetadata.participants : []
+    let bot = m.isGroup ? participants.find(u => u.jid == this.user.jid) : {}
+    if (bot.isAdmin || bot.isSuperAdmin) {
+        let linkGC = this.groupInviteCode(m.chat)
+        let isLinkThisGc = new RegExp(linkGC, 'g')
+        let isgclink = isLinkThisGc.exec(m.text)
+        if (isgclink)
+        conn.groupRemove(m.chat, [m.sender])
+        
+    } else m.reply('*El bot no es admin, no se puede exterminar a las personas*')
   }
-  return !0
+  return true
 }
-
-module.exports = handler
