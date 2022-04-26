@@ -9,6 +9,7 @@ global.APIs = { // API Prefix
   zeks: 'https://api.zeks.xyz',
   pencarikode: 'https://pencarikode.xyz',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
+  zenz: 'https://zenzapi.xyz'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
@@ -17,6 +18,7 @@ global.APIKeys = { // APIKey Here
   'https://api.zeks.xyz': 'apivinz',
   'https://pencarikode.xyz': 'pais',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
+  'https://zenzapi.xyz': '110cd11dc6'
 }
 
 // Sticker WM
